@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { useSelector } from "react-redux";
 
 export default function TextList() {
-  const data = useContext(AppContext);
-
-  const { texts } = data;
+  const texts = useSelector((state) => state.texts);
+  console.log(texts);
 
   return (
     <ul>
